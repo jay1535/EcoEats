@@ -1,0 +1,57 @@
+import {
+    SignedIn,
+    SignedOut,
+    SignInButton,
+    SignUpButton,
+    UserButton,
+  } from "@clerk/nextjs";
+import { Button } from "./ui/button";
+  
+  export default function Header() {
+    return (
+      <header className="
+     fixed top-0 w-full border-b border-stone-200 bg-stone-50/80 backdrop-blur-md z-50 supports-backdrop-filter:bg-stone-50/60
+      ">
+        <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+          
+         LOGO
+
+        <div>
+          Nav Links
+          </div>
+          
+          {/* Right: Auth buttons */}
+          <div className="flex items-center gap-3">
+          <SignedIn>
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: "h-9 w-9",
+                  },
+                }}
+              />
+            </SignedIn>
+            <SignedOut>
+            <SignInButton mode="modal">
+              <Button
+                variant="ghost"
+                className="text-stone-600 hover:text-orange-600 hover:bg-orange-50 font-medium"
+              >
+                Sign In
+              </Button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <Button variant="primary" className="rounded-full px-6">
+                Get Started
+              </Button>
+            </SignUpButton>
+          </SignedOut>
+  
+           
+          </div>
+  
+        </nav>
+      </header>
+    );
+  }
+  
