@@ -10,12 +10,9 @@ import { Button } from "./ui/button";
   export default function Header() {
     return (
       <header className="
-     fixed top-0 w-full border-b border-stone-200 bg-stone-50/80 backdrop-blur-md z-50 supports-backdrop-filter:bg-stone-50/60
-      ">
-        <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-          
+     fixed top-0 w-full border-b border-stone-200 bg-stone-50/80 backdrop-blur-md z-50 supports-backdrop-filter:bg-stone-50/60">
+        <nav className="container mx-auto px-4 h-16 flex items-center justify-between"> 
          LOGO
-
         <div>
           Nav Links
           </div>
@@ -46,10 +43,7 @@ import { Button } from "./ui/button";
               </Button>
             </SignUpButton>
           </SignedOut>
-  
-           
           </div>
-  
         </nav>
       </header>
     );
