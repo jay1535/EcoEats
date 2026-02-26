@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from '@/components/Header';
 import { ClerkProvider } from '@clerk/nextjs';
 import { shadcn } from '@clerk/themes'
+import Footer from '@/components/Footer';
 
 
 const inter = Inter({
@@ -27,13 +28,7 @@ export default function RootLayout({ children }) {
           
         {children}
         </main>
-        <footer className='py-4 px-4 border-t'>
-        <div className='max-w-6xl mx-auto flex justify-center items-center'>
-          <p className='text-stone-500 text-sm'>
-          Made with 💖 by jay1535
-          </p>
-          </div>
-        </footer>
+       <Footer/>
        
       </body>
     </html>
